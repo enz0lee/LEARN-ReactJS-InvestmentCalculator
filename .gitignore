@@ -1,0 +1,46 @@
+# See https://github.com/github/gitignore/blob/main/Node.gitignore
+# and https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
+
+# === Node & React ===
+node_modules/
+build/
+dist/
+.env
+.env.* # e.g., .env.local, .env.development
+.npmrc
+package-lock.json
+yarn.lock
+.pnp.*
+.pnp
+
+# === Optional: cache and logs ===
+.cache/
+.cache-loader/
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === VS Code ===
+.vscode/
+.history/
+*.code-workspace
+
+# === MacOS/Linux system files ===
+.DS_Store
+Thumbs.db
+
+# === Testing ===
+coverage/
+*.lcov
+
+# === IDE specific ===
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# === Misc ===
+*.tgz
+*.tar.gz
