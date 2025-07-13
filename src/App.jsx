@@ -11,6 +11,10 @@ function App() {
     duration: 10,
   })
 
+  const inputIsValid = Object.values(userInput).every(
+    (value) => typeof value === 'number' && value >= 0
+  )
+
   function handleChange(event) {
     const { name, value } = event.target
     setUserInput((prevInput) => ({
@@ -23,7 +27,11 @@ function App() {
     <>
       <Header />
       <UserInput userInput={userInput} onChange={handleChange} />
-      <Results input={userInput} />
+      {inputIsValid ? (
+        <Results input={userInput} />
+      ) : (
+        <p>Please enter valid input values.</p>
+      )}
     </>
   )
 }
